@@ -18,8 +18,8 @@ public class Employer extends AbstractEntity {
     @Size(max = 50, message = "Location must be less than 50 characters long")
     private String location;
 
-    @OneToMany(mappedBy = "employer") // need parameter
-    @JoinColumn
+    @OneToMany
+    @JoinColumn(name = "employer_id") // What should the name of this parameter be? job id? employer? employer id?
     private final List<Job> jobs = new ArrayList<>();
 
     public String getLocation() {
