@@ -20,7 +20,7 @@ public class Employer extends AbstractEntity {
 
     @OneToMany
     @JoinColumn(name = "employer_id") // What should the name of this parameter be? job id? employer? employer id?
-    private final List<Job> jobs = new ArrayList<>();
+    private List<Job> jobs = new ArrayList<>();
 
     public String getLocation() {
         return location;
