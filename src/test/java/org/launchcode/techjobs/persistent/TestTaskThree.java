@@ -151,7 +151,7 @@ public class TestTaskThree extends AbstractTest {
     /*
      * Verifies that HomeController.displayAddJobForm calls employerRepository.findAll()
      * */
-//    @Test
+    @Test
     public void testHomeControllerFetchesEmployers(@Mocked EmployerRepository employerRepository, @Mocked SkillRepository skillRepository) throws ClassNotFoundException, NoSuchFieldException, IllegalAccessException {
         Class homeControllerClass = getClassByName("controllers.HomeController");
         HomeController homeController = new HomeController();
